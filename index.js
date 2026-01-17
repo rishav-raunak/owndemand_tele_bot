@@ -5,7 +5,7 @@ const express = require('express');
 // --- CONFIGURATION ---
 // Inhe Render ke 'Environment Variables' mein set karna best hai
 const BOT_TOKEN = process.env.BOT_TOKEN || '8550027283:AAFFLvVwZ6MwxPVGSRpHUxiRWdagE0EPtr4'; 
-const apiKey = process.env.apiKey || "AIzaSyARBd_HxNJ8u_2gem8NRrKy_hTpRidu48k"; 
+const apiKey = process.env.apiKey ; 
 const CHANNEL_ID = '@competative_current_affair'; 
 
 const bot = new Telegraf(BOT_TOKEN);
@@ -110,5 +110,6 @@ bot.launch()
 process.once('SIGINT', () => bot.stop('SIGINT'));
 
 process.once('SIGTERM', () => bot.stop('SIGTERM'));
+
 
 
